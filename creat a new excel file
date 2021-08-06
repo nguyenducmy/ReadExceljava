@@ -1,0 +1,21 @@
+package WriteExcel;
+
+
+import java.io.*;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
+
+public class WriteExcel {
+  public static void main(String[] args) throws IOException {
+    //creat object workbook
+    Workbook wb = new HSSFWorkbook();
+    //creat excel file
+    OutputStream fileOut = new FileOutputStream("D:/Java web/.xlsx");
+    System.out.println("File Excel success.");
+    wb.write(fileOut);
+  
+    fileOut.close();
+    
+    wb.close();
+  }
+}
